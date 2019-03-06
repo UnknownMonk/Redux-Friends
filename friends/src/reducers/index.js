@@ -1,4 +1,4 @@
-import { ERROR, SUCCESS, FETCHING } from './actions';
+import { ERROR, SUCCESS, FETCHING } from '../actions/index';
 
 const initialState = {
   fetchingFriends: false,
@@ -13,7 +13,7 @@ const initialState = {
   error: null
 };
 
-export const friendReducer = (state = initialState, action) => {
+export default (state = initialState, action) => {
   switch (action.type) {
     default:
       return state;
