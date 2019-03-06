@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import LogingPage from './component/LogingPage';
 import { login } from '../src/actions/index';
 import './App.css';
+import FriendsListView from './views/FriendsListView';
 
 class App extends Component {
   render() {
@@ -13,12 +14,13 @@ class App extends Component {
         </div>
       );
     } else {
-      return <h1>logged in Hello</h1>;
+      return <FriendsListView />;
     }
   }
 }
 const mapStateToProps = state => ({
-  loggedIn: state.loggedIn
+  loggedIn: state.loggedIn,
+  token: state.token
 });
 
 export default connect(
